@@ -5,9 +5,8 @@ import NewTodoForm from './NewTodoForm'
 
 
 function App() {
-  const defaultlist = [{title: "this is a new list item 🥰", done: false}, {title: "this is a new list item", done: true}] 
   
-  let [todos, setTodos] = useState(defaultlist)
+  let [todos, setTodos] = useState([])
   
   const updateTodo = (newToDo) => {
     setTodos([...todos, newToDo])
