@@ -24,6 +24,9 @@ function App() {
   
   return (
     <div className="App">
+      <h1>Let's organize ourselves!!!</h1>
+      <br></br>
+      <br></br>
       <NewTodoForm setNewTodo={(newToDo) => updateTodo(newToDo)} />
       <ToDoList
         todos={todos}
