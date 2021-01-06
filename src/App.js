@@ -1,29 +1,28 @@
 import "./App.css";
 import ToDoList from "./ToDoList";
-import { useState } from "react";
-import NewTodoForm from "./NewTodoForm";
+import {useState} from 'react';
+import NewTodoForm from './NewTodoForm'
+
 
 function App() {
-  let [todos, setTodos] = useState([]);
-
+  const defaultlist = [{title: "this is a new list item 🥰", done: false}, {title: "this is a new list item", done: true}] 
+  
+  let [todos, setTodos] = useState(defaultlist)
+  
   const updateTodo = (newToDo) => {
-    setTodos([...todos, newToDo]);
-  };
-
+    setTodos([...todos, newToDo])
+  }; 
+  
   const removeTask = (index) => {
-    console.log("before", todos);
     todos.splice(index, 1);
     setTodos([...todos]);
-    console.log("After", todos);
   };
 
   const markAsDone = (index) => {
     todos[index].done = todos[index].done ? false : true;
     setTodos([...todos]);
-    console.log(todos);
-    console.log(index);
   };
-
+  
   return (
     <div className="App">
       <NewTodoForm setNewTodo={(newToDo) => updateTodo(newToDo)} />

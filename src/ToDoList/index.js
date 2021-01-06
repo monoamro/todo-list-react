@@ -1,14 +1,13 @@
 import Todo from "../Todo";
-import React, { useState } from "react";
 
 const ToDoList = ({ todos, setDeleteIndex, setCompleteIndex }) => {
+
   const passDeleteIndex = (index) => {
     setDeleteIndex(index);
   };
 
   const passCompleteIndex = (index) => {
     setCompleteIndex(index);
-    console.log("TodoList: ", index);
   };
 
   return (

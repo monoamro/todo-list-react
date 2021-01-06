@@ -17,6 +17,7 @@ body {
 }
 form {
   width: 70%;
+  max-width: 670px;
   display: flex;
   justify-content: space-around;
 }
