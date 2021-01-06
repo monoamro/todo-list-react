@@ -11,17 +11,27 @@
   border: 1px solid #ffc9ff;
 }
 
+.todo:hover {
+  background-color: rgba(147, 255, 193, 0.5);
+}
+
 .todo button {
+  font-weight: 900;
   width: 8%;
   min-width: 48px;
   margin: 0;
   box-shadow: none;
 }
 
+.todo button:hover {
+  background-color: red;
+}
+
 .todo p {
   width: 92%;
   text-align: left;
 }
+
 .done {
   text-decoration: line-through;
   color: red;
