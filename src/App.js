@@ -15,8 +15,8 @@ function App() {
   const removeTask=(index)=>{
     console.log(index);
     todos.splice(index,1);
-    setTodos(todos);
-    console.log(todos);
+    setTodos([...todos]);
+    
   }
   
   return (
