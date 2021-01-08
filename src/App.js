@@ -16,6 +16,7 @@ function App() {
   };
 
   const markAsDone = (index) => {
+    console.log(index);
     todos[index].done = todos[index].done ? false : true;
     setTodos([...todos]);
   };
@@ -28,7 +29,7 @@ function App() {
       <ToDoList  
         todos={todos}
         setDeleteIndex={(index) => removeTask(index)}
-        setCompleteIndex={(index) => markAsDone(index)}
+        setCompleteIndex={markAsDone}
       />    
     </div>
   );
